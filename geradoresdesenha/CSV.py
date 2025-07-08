@@ -26,7 +26,7 @@ tempo_maximo_estimado = combinacoes_totais * tempo_por_tentativa
 print(f"\nIniciando ataque por força bruta...")
 print(f"Senha alvo: {senha_correta}")
 print(f"Tentativas máximas esperadas: {combinacoes_totais:,}")
-print(f"Tempo máximo estimado: {tempo_maximo_estimado:.2f} segundos ({tempo_maximo_estimado/60:.2f} minutos aprox.)\n")
+print(f"Tempo máximo estimado: {tempo_maximo_estimado:.2f} segundos ({tempo_maximo_estimado/60:.2f} minutos aprox.) ({tempo_maximo_estimado/3600:.2f} horas aproxi.) ({tempo_maximo_estimado/86400:.2f} dias aproxi.)\n")
 
 # Início da contagem de tempo
 inicio = time.time()
@@ -47,7 +47,7 @@ for tamanho in range(1, 100):  # Limite de segurança
             encontrada = True
             break
 
-        time.sleep(tempo_por_tentativa)
+        time.sleep(0)
 
     if encontrada:
         break
@@ -55,7 +55,7 @@ for tamanho in range(1, 100):  # Limite de segurança
 # Mostra o resultado
 print(f"\nSenha encontrada: '{tentativa_certa}'")
 print(f"Tentativas realizadas: {tentativas}")
-print(f"Tempo total gasto: {tempo_total:.2f} segundos ({tempo_total/60:.2f} minutos)")
+print(f"Tempo total gasto: {tempo_total:.2f} segundos ({tempo_total/60:.2f} minutos) ({tempo_total/3600:.2f} horas) ({tempo_total/86400:.2f} dias)\n")
 
 # Gera o CSV
 agora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
