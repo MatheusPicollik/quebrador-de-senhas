@@ -6,7 +6,7 @@ import itertools
 caracteres_possiveis = string.ascii_letters + string.digits + string.punctuation
 
 #tempo estimado por tentativa (em segundos)
-tempo_por_tentativa = 0.001
+tempo_por_tentativa = 0
 
 #senha do usuario
 senha_correta = input("Digite a senha (qualquer número de caracteres, incluindo especiais): ")
